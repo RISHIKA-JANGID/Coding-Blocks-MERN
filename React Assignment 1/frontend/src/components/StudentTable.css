@@ -1,0 +1,35 @@
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.student-table th {
+  background: #007bff;
+  color: white;
+  padding: 14px;
+}
+
+.student-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.student-table tr:hover {
+  background: #f1f1f1;
+}
+
+.edit-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: darkorange;
+}

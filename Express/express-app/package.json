@@ -1,0 +1,24 @@
+{
+  "name": "w3-school-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshishSharma0704/Coding-Blocks-WEB-DEV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AshishSharma0704/Coding-Blocks-WEB-DEV/issues"
+  },
+  "homepage": "https://github.com/AshishSharma0704/Coding-Blocks-WEB-DEV#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

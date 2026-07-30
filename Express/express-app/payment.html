@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    .payment-page {
+      max-width: 420px;
+      margin: 60px auto;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .payment-page h1 {
+      margin-top: 0;
+      font-size: 28px;
+      letter-spacing: -0.4px;
+    }
+
+    .payment-page p {
+      margin: 8px 0 24px;
+      color: #666;
+    }
+
+    .payment-page label {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .payment-page input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-top: 8px;
+      border: 1px solid #d7dde8;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    .payment-page input:focus {
+      border-color: #5b8df9;
+      box-shadow: 0 0 0 4px rgba(91, 141, 249, 0.12);
+    }
+
+    .payment-page .inline-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .payment-page button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 12px;
+      background: #3d72ff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .payment-page button:hover {
+      background: #345fe1;
+    }
+  </style>
+</head>
+<body>
+  <section class="payment-page">
+    <h1>Payment</h1>
+    <p>Enter your card details to complete the purchase.</p>
+
+    <form>
+      <label>
+        Cardholder Name
+        <input type="text" name="cardholder" placeholder="John Doe" required>
+      </label>
+
+      <label>
+        Card Number
+        <input type="text" name="cardnumber" placeholder="1234 5678 9012 3456" inputmode="numeric" maxlength="19" required>
+      </label>
+
+      <div class="inline-fields">
+        <label>
+          Expiry Date
+          <input type="text" name="expiry" placeholder="MM/YY" maxlength="5" required>
+        </label>
+
+        <label>
+          CVC
+          <input type="text" name="cvc" placeholder="123" inputmode="numeric" maxlength="4" required>
+        </label>
+      </div>
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </section>
+</body>
+</html>

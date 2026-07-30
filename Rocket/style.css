@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    /* border: 2px solid red; */
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("./img/Space.png");
+    background-color: rgb(20, 0, 94);
+    animation-name: bgMove;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    
+}
+
+.rocket{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 350px;
+    bottom: 150px;
+    transform: rotate(45deg);
+
+    animation: rocketMove 2s linear 3,
+               rocketRotate 1s ease-in-out 11s forwards,
+               rocketFlyAway 1s ease-in 12s forwards;
+}
+
+.rocket img{
+    height: 100%;
+    width: 100%;
+}
+
+
+@keyframes bgMove{
+    100%{
+        background-position: -50000px;
+    }
+}
+
+@keyframes rocketMove{
+    0%{
+        bottom: 150px;
+    }
+    25%{
+        bottom: 200px;
+    }
+    50%{
+        bottom: 150px;
+    }
+    75%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 150px;
+    }
+}
+
+@keyframes rocketRotate {
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes rocketFlyAway {
+    0%{
+        bottom: 150px;
+        opacity: 1;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+.cody{
+    height: 150px;
+    width: 150px;
+    position: absolute; 
+    bottom: 150px;
+    left: -400px;
+
+
+    animation: codyMove 3s 6s forwards ,
+               codyInRocket 1s 9.5s forwards;
+
+}
+
+.cody img{
+    height: 100%;
+      
+}
+
+@keyframes codyMove{
+    100%{
+        left: 300px;
+    }
+}
+
+@keyframes codyInRocket{
+    100%{
+        left: 390px;
+        transform: scale(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px){
+    .rocket{
+        height: 140px;
+        width: 140px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        bottom: 100px;
+    }
+    .rocket img{ width: 100%; }
+    .cody{
+        height: 110px;
+        width: 110px;
+        left: 10px;
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 420px){
+    .rocket{
+        height: 100px;
+        width: 100px;
+        bottom: 80px;
+    }
+    .cody{
+        height: 80px;
+        width: 80px;
+        bottom: 80px;
+    }
+}

@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#myInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#myInput:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#myInput::placeholder {
+    color: #999;
+}
+
+#myUL {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    flex-wrap: wrap;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 150px;
+}
+
+
+
+.task-content span {
+    word-break: break-word;
+    transition: all 0.3s ease;
+}
+
+.task-content span.completed {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.7;
+}
+
+.task-content input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.addBtn {
+    padding: 12px 25px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.addBtn:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+.addBtn:active {
+    transform: scale(0.98);
+}
+
+.completeBtn {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.completeBtn:hover {
+    background-color: #45a049;
+}
+
+.removeBtn {
+    padding: 8px 15px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.removeBtn:hover {
+    background-color: #cc0000;
+}
+
+@media (max-width: 600px) {
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .completeBtn,
+    .removeBtn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

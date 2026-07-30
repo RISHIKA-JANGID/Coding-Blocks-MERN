@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h2>Product Page</h2>
+    <button class="btn btn-dark" onclick="window.location.href='/create'" style="margin-bottom: 10px;">Create Product</button>
+    <div class="container d-flex flex-wrap justify-content-center">
+        
+        <% products.forEach(product => { %>
+            
+            <div class="card m-2" style="width: 18rem;">
+                <img style="height: 150px; width: auto;" src="<%= product.image %>" alt="<%= product.name %>" class="img-fluid">
+                <div class="card-body">
+                    <h3 class="card-title"><%= product.name %></h3>
+                    <p class="card-text"><%= product.description %></p>
+                    <p class="card-text">Price: $<%= product.price.toFixed(2) %></p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <button class="btn btn-info" onclick="window.location.href='/products/<%= product.id %>'">View Details</button>
+                    
+                    <a href="/products/<%= product.id %>/edit" class="btn btn-warning">
+                        Edit
+                    </a>
+                    <form action="/products/delete/<%= product.id %>" method="POST" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+        <% }); %>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
